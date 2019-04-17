@@ -2,33 +2,6 @@
 微信的原生项目
 制造轮子 
 
-###########目录结构描述
-├── Readme.md                   // help
-├── assets                      // 资源文件
-├── config                      // 配置
-│   ├── default.json
-│   ├── dev.json                // 开发环境
-│   ├── experiment.json         // 实验
-│   ├── index.js                // 配置控制
-│   ├── local.json              // 本地
-│   ├── production.json         // 生产环境
-│   └── test.json               // 测试环境
-├── data
-├── doc                         // 文档
-├── environment
-├── gulpfile.js
-├── locales
-├── logger-service.js           // 启动日志配置
-├── node_modules
-├── package.json
-├── app-service.js              // 启动应用配置
-├── static                      // web静态资源加载
-│   └── initjson
-│       └── config.js         // 提供给前端的配置
-├── test
-├── test-service.js
-└── tools
-
 ## 打油诗
 写字楼里写字间，写字间里程序员； 
 程序人员写程序，又拿程序换酒钱。 

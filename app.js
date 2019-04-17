@@ -34,6 +34,7 @@ App({
     })
   },
   globalData: {
+    tabSelected: 0,
     userInfo: null
   }
 })
