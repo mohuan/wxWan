@@ -4,6 +4,12 @@
     "pages/logs/logs"
   ],
   "tabBar": {
+    "info": [
+      "自定义底部bar模式",
+      {
+        "custom": true
+      }
+    ],
     "color": "#BDBEC0",
     "selectedColor": "#0089FF",
     "borderStyle": "white",
