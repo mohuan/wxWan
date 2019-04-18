@@ -13,7 +13,7 @@ Component({
    * 组件的初始数据
    */
   data: {
-    selected: app.globalData.tabSelected,
+    selected: 0,
     list: [
       {
       "pagePath": "/pages/index/index",
@@ -37,21 +37,25 @@ Component({
     switchTab(e) {
       const data = e.currentTarget.dataset
       const url = data.path
-      app.globalData.tabSelected = data.index
-      this.setData({
-        selected: data.index
-      })
+
       wx.switchTab({
         url
       })
+
+      this.setData({
+        selected: data.index
+      })
+
+      //需要在组件中设置 getTabBar 的值
     }
   },
   lifetimes: {
     attached() {
       //在组件实例进入页面节点树时执行
-      this.setData({
-        selected: app.globalData.tabSelected ? app.globalData.tabSelected:0
-      })
+      // this.setData({
+      //   selected: app.globalData.tabSelected ? app.globalData.tabSelected:0
+      // })
+      // console.log("attached", this.data.selected)
     },
     detached() {
       // 在组件实例被从页面节点树移除时执行
@@ -59,7 +63,7 @@ Component({
   },
   pageLifetimes: {
     show() {
-      debugger
+      
     },
     hide() {
       // 页面被隐藏
