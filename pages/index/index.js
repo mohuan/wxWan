@@ -3,7 +3,8 @@
 const fw = require('../../lib/framework.js');
 Component({
   data: {
-    banners: []
+    banners: [],
+    page: 0
   },
   lifetimes: {
     attached() {
@@ -18,6 +19,7 @@ Component({
     initData() {
       //1.load head
       this.loadBanner();
+      this.loadHomeArticle();
     },
     loadBanner() {
       let _self = this;
@@ -38,6 +40,19 @@ Component({
         _self.setData({
           banners: result
         })
+      }).catch(error => {
+
+      })
+    },
+    loadHomeArticle() {
+      let _self = this;
+      fw.restList('homeArticle', {
+        page: this.data.page
+      }, {
+        disableMask: false,
+        successMessage: ''
+      }).then(result => {
+        debugger
       }).catch(error => {
 
       })
