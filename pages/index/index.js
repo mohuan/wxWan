@@ -4,6 +4,7 @@ const fw = require('../../lib/framework.js');
 Component({
   data: {
     banners: [],
+    articles:[],
     page: 0
   },
   lifetimes: {
@@ -52,7 +53,9 @@ Component({
         disableMask: false,
         successMessage: ''
       }).then(result => {
-        debugger
+        _self.setData({
+          articles: result.datas
+        })
       }).catch(error => {
 
       })
