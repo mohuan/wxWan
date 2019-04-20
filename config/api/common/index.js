@@ -1,3 +1,4 @@
 module.exports = {
-  'banner':'/banner/json'
+  'banner':'/banner/json',
+  'homeArticle':'/article/list/'
 }

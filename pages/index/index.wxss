@@ -1,1 +1,38 @@
 /**index.wxss**/
+.container{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slide-image{
+  position: relative
+}
+
+.page-section{
+  width: 100%;
+  margin-bottom: 60rpx;
+}
+.page-section_center{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.page-section:last-child{
+  margin-bottom: 0;
+}
+.page-section-gap{
+  box-sizing: border-box;
+  padding: 0 30rpx;
+}
+.page-section-spacing{
+  box-sizing: border-box;
+  padding: 0 80rpx;
+}
+.page-section-title{
+  font-size: 28rpx;
+  color: #999999;
+  margin-bottom: 10rpx;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+}
