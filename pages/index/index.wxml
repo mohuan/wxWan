@@ -1,5 +1,5 @@
 <!--index.wxml-->
-<view class='home-container'>
+<scroll-view class='home-container' scroll-y='true' style="height:{{lheight}}rpx" bindscrolltolower='loadMore' >
   <view class="page-section ">
     <swiper indicator-dots="{{true}}" autoplay="{{false}}" interval="5000" duration="1000">
       <block wx:for="{{banners}}" wx:key="{{index}}">
@@ -32,4 +32,4 @@
  
 
 
-</view>
+</scroll-view>

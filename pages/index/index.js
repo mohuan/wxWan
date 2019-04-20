@@ -5,11 +5,15 @@ Component({
   data: {
     banners: [],
     articles:[],
-    page: 0
+    page: 0,
+    lheight:0
   },
   lifetimes: {
     attached() {
       // 在组件实例进入页面节点树时执行
+      this.setData({
+        lheight: fw.countHeight(0)
+      })
     },
     detached() {
       // 在组件实例被从页面节点树移除时执行
@@ -54,11 +58,17 @@ Component({
         successMessage: ''
       }).then(result => {
         _self.setData({
-          articles: result.datas
+          articles: this.data.articles.concat(result.datas)
         })
       }).catch(error => {
 
       })
+    },
+    loadMore(){
+      this.setData({
+        page:this.data.page+1
+      })
+      this.loadHomeArticle();
     }
   },
   pageLifetimes: {
