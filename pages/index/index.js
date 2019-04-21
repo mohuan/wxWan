@@ -69,6 +69,13 @@ Component({
         page:this.data.page+1
       })
       this.loadHomeArticle();
+    },
+    openWeb(evt){
+      let item = evt.currentTarget.dataset.item;
+      wx.navigateTo({
+        url: '/pages/browser/index?url=' + item.link,
+      })
+      // pages/browser/index
     }
   },
   pageLifetimes: {

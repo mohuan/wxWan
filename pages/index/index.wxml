@@ -11,7 +11,7 @@
   </view>
 
   <view class='list'>
-   <view class='list-item' wx:for="{{articles}}" wx:key="{{index}}" data-item='{{item}}'>
+   <view class='list-item' wx:for="{{articles}}" wx:key="{{index}}" data-item='{{item}}' bindtap='openWeb'>
     <view class='list-item-title'>{{item.title}}</view>
     <view class='list-item-content'>
       <view class='lic-item'>
