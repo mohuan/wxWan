@@ -2,7 +2,8 @@
   "pages": [
     "pages/index/index",
     "pages/logs/logs",
-    "pages/browser/index"
+    "pages/browser/index",
+    "pages/login/login"
   ],
   "tabBar": {
     "info": [
@@ -29,6 +30,9 @@
         "text": "我的"
       }
     ]
+  },
+  "usingComponents": {
+    "app-main": "/components/app-state-main/index"
   },
   "window": {
     "backgroundTextStyle": "light",

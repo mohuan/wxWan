@@ -1,0 +1,97 @@
+<!--pages/common/loadding/wellcome.wxml-->
+
+<app-main>
+
+  <view class="login-wrap" wx:if="{{loginForm.role==0}}">
+    <text class="question">请问您的身份是？</text>
+    <view class='role-teacher role-text' data-role='1' bindtap="roleChange">
+      <image src='https://skyworth-cloud-image.oss-cn-beijing.aliyuncs.com/icons/head/teacher-girl-large.png'></image>
+      <text>学校老师</text>
+    </view>
+    <view class='role-student role-text' data-role='2' bindtap="roleChange">
+      <image src='https://skyworth-cloud-image.oss-cn-beijing.aliyuncs.com/icons/head/parent-boy-large.png '></image>
+      <text>学生家长</text>
+    </view>
+  </view>
+
+
+
+
+  <!--教师登陆页面-->
+  <view class="login-wrap" wx:if="{{loginForm.role==1}}">
+    <form bindsubmit="loginFormSubmit">
+      <view class='login-role-title'>教师登录</view>
+      <view class="login-form-item-wrap login-user">
+        <input name="phone" placeholder="请输入学校预留手机号" bindinput="phoneBlur"/>
+      </view>
+
+      <view class="login-form-item-wrap login-pwd" wx:if="{{loginForm.lx=='1'}}">
+        <input name="password" password="true" placeholder="请输入密码" />
+      </view>
+
+      <view class="login-form-item-wrap login-code" wx:if="{{loginForm.lx=='0'}}">
+        <view class='login-code-wrap'>
+          <input name="code" placeholder="请输入验证码" style='width:380rpx;' />
+          <view class='login-code-send' 
+          bindtap="sendPhoneCode">{{!loading?'获取验证码':clock}}</view>
+        </view>
+      </view>
+
+      <view class="login-form-role" bindtap="roRole">
+        身份切换
+        <image class='lfr-img' src='https://skyworth-cloud-image.oss-cn-beijing.aliyuncs.com/wxapp/arrow/gray-right-10.png'></image>
+      </view>
+
+      <view>
+        <button form-type="submit" style='margin-top: 20rpx;'>登录</button>
+      </view>
+
+      <view class="login-form-lx" bindtap="lxChange">{{loginForm.lx=='0'?'密码登录':'验证码登录'}}</view>
+
+
+      <!-- <view>（请勿关注）调试信息：{{log}}</view> -->
+
+
+    </form>
+
+
+  </view>
+
+
+
+  <!--家长登陆页面-->
+  <view class="login-wrap" wx:if="{{loginForm.role==2}}">
+    <form bindsubmit="loginFormSubmit">
+      <view class='login-role-title'>家长登录</view>
+      <view class="login-form-item-wrap login-user">
+        <input name="phone" placeholder="请输入手机号" bindblur="phoneBlur" />
+      </view>
+
+      <view class="login-form-item-wrap login-pwd" wx:if="{{loginForm.lx=='1'}}">
+        <input name="password" password="true" placeholder="请输入密码" />
+      </view>
+
+      <view class="login-form-item-wrap login-code" wx:if="{{loginForm.lx=='0'}}">
+        <view class='login-code-wrap'>
+          <input name="code" placeholder="请输入验证码" style='width:380rpx;' />
+          <view class='login-code-send' bindtap="sendPhoneCode2">{{!loading?'获取验证码':clock}}</view>
+        </view>
+      </view>
+
+      <view class="login-form-role" bindtap="roRole">
+        身份切换
+        <image class='lfr-img' src='https://skyworth-cloud-image.oss-cn-beijing.aliyuncs.com/wxapp/arrow/gray-right-10.png'></image>
+      </view>
+
+      <view>
+        <button form-type="submit" style='margin-top: 20rpx;'>登录</button>
+      </view>
+
+      <view class="login-form-lx" bindtap="lxChange" wx:if="{{changeRole}}">{{loginForm.lx=='0'?'密码登录':'验证码登录'}}</view>
+
+
+    </form>
+
+
+  </view>
+</app-main>

@@ -1,0 +1,16 @@
+<!--commpents/app-main/app-main.wxml-->
+<!-- <template is="{{goodsList.list.length > 0 ? 'cart-goods-list' : 'no-goods'}}" data="{{...goodsList}}"></template> -->
+<import src="../template-page/template-page.wxml" />
+
+<view class="{{isTabPage?'app-main-tab':'app-main'}}" style='{{isTabPage?"top":"margin-top"}}: {{height}}px;'>
+  <view class='state-load' wx:if="{{current == state.load}}">
+    <template is="state-load"></template>
+  </view>
+  <view class='state-error' wx:elif="{{current == state.error}}">
+    <template is="state-error"></template>
+  </view>
+  <view class='state-empty' wx:elif="{{current == state.empty}}">
+    <template is="state-empty"></template>
+  </view>
+  <slot wx:else></slot>
+</view>

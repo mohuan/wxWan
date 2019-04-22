@@ -1,0 +1,18 @@
+<!-- 数据加载中 -->
+<template name="state-load">
+  <image class='image-load' src='http://www.sucaijishi.com/uploadfile/2015/0210/20150210104951657.gif'></image>
+  <view class='state-load-info'>疯狂加载数据…</view>
+</template>
+
+<!-- 数据加载失败 -->
+<template name="state-error">
+  <image class='image-error' src='https://skyworth-cloud-image.oss-cn-beijing.aliyuncs.com/wxapp/common/state-error.png' mode='aspectFill'></image>
+  <view class='state-error-info'>唉呀，网络走丢了…</view>
+  <button class='refresh-button' bindtap='refresh'>点击刷新</button>
+</template>
+
+<!-- 数据为空 -->
+<template name="state-empty">
+  <image class='image-empty' src='https://skyworth-cloud-image.oss-cn-beijing.aliyuncs.com/wxapp/common/state-empty.png' mode='aspectFill'> </image>
+  <view class='state-empty-info'>还没有内容哦</view>
+</template>

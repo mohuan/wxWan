@@ -1,0 +1,169 @@
+/* pages/common/loadding/wellcome.wxss */
+
+Page {
+  background-color: #fff;
+}
+
+.login-wrap {
+  margin: 114rpx 61rpx 0rpx 61rpx;
+  position: relative;
+}
+
+.login-form-item-wrap {
+  height: 61rpx;
+  width: 628rpx;
+  border-bottom: 2rpx solid #d8d8d8;
+  margin-top: 50rpx;
+  position: relative;
+}
+
+.login-form-item-wrap input {
+  font-size: 30rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: rgba(168, 168, 168, 1);
+  margin-left: 72rpx;
+  padding-top: 4rpx;
+}
+
+.login-user {
+  background-image: url("https://skyworth-cloud-image.oss-cn-beijing.aliyuncs.com/wxapp/login/login-name.png");
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 23rpx 34rpx;
+}
+
+.login-pwd {
+  background-image: url("https://skyworth-cloud-image.oss-cn-beijing.aliyuncs.com/wxapp/login/login-pwd.png");
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 34rpx 34rpx;
+}
+
+.login-code {
+  background-image: url("https://skyworth-cloud-image.oss-cn-beijing.aliyuncs.com/wxapp/login/login-code.png");
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 34rpx 34rpx;
+}
+
+.login-code-wrap {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.login-code-send {
+  width: 168rpx;
+  height: 43rpx;
+  font-size: 30rpx;
+  font-family: PingFangSC-Medium;
+  font-weight: 700;
+  color: rgba(83,147,136,1);
+  line-height: 43rpx;
+  border-left: 2rpx solid rgba(216, 216, 216, 1);
+  padding-left: 16rpx;
+  padding-top: 8rpx;
+  position: relative;
+}
+
+.login-form-lx {
+  text-align: center;
+  margin-top: 50rpx;
+  font-size: 30rpx;
+  font-family: PingFangSC-Medium;
+  font-weight: 700;
+  color: rgba(168, 170, 176, 1);
+}
+
+.login-form-role {
+  text-align: right;
+  padding-top: 50rpx;
+  font-size: 30rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: rgba(168, 170, 176, 1);
+}
+
+.login-form-role .lfr-img {
+  position: relative;
+  width: 10rpx;
+  height: 18rpx;
+  margin-left: 8rpx;
+}
+
+/* .login-form-role::after{
+  content: '';
+  background: url() no-repeat top left;
+  background-size: 100% 100%;
+  width: 10rpx;
+  height: 18rpx;
+  top: 10rpx;
+  right: 10rpx;
+  position: absolute;
+} */
+
+.question {
+  text-align: center;
+  width: 399rpx;
+  height: 70rpx;
+  font-size: 50rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: rgba(51, 51, 51, 1);
+  line-height: 70rpx;
+  margin-top: 171rpx;
+  margin-bottom: 171rpx;
+  margin-left: 140rpx;
+}
+
+.role-teacher {
+  margin-top: 171rpx;
+  width: 630rpx;
+  height: 280rpx;
+  background-image: url("https://skyworth-cloud-image.oss-cn-beijing.aliyuncs.com/wxapp/login/login-teacher-bg.png");
+  border-radius: 8rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  background-position: top left;
+  background-size: 100%;
+}
+
+.role-student {
+  margin-top: 60rpx;
+  width: 630rpx;
+  height: 280rpx;
+  background-image: url("https://skyworth-cloud-image.oss-cn-beijing.aliyuncs.com/wxapp/login/login-parent-bg.png");
+  border-radius: 8rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  background-position: top left;
+  background-size: 100%;
+}
+
+.role-text text {
+  font-size: 40rpx;
+  font-family: PingFangSC-Medium;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 1);
+  margin-left: 58rpx;
+  line-height: 280rpx;
+}
+
+.role-text image {
+  width: 200rpx;
+  height: 200rpx;
+  margin: 40rpx 0 40rpx 40rpx;
+}
+
+.login-role-title {
+  position: relative;
+  height: 42rpx;
+  font-size: 30rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: rgba(83,147,136,1);
+  line-height: 42rpx;
+}

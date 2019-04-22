@@ -1,0 +1,18 @@
+/* commpents/app-main/app-main.wxss */
+@import "../template-page/template-page.wxss";
+.app-main {
+  height: 100%;
+  /* min-height: 100%; */
+  flex-grow: 1;
+  /**padding: 20rpx 30rpx;**/
+  overflow-x: hidden;
+}
+
+.app-main-tab {
+  flex-grow: 1;
+  overflow-x: hidden;
+  position: fixed;
+  bottom: 98rpx;
+  left: 0;
+  right: 0;
+}

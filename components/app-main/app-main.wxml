@@ -1,0 +1,5 @@
+<!--commpents/app-main/app-main.wxml-->
+<view class="{{isTabPage?'app-main-tab':'app-main'}} " style='{{isTabPage?"top":"margin-top"}}: {{height}}px;'>
+<slot></slot>
+</view>
+
