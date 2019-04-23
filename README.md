@@ -23,3 +23,15 @@
 别人笑我忒疯癫，我笑自己命太贱；<br /> 
 不见满街漂亮妹，哪个归得程序员。<br />
 
+### git回滚到任意版本 
+1.先显示提交的log <br /> 
+git log -3<br /> 
+commit 4dc08bb8996a6ee02f<br /> 
+Author: Mark <xxx@xx.com><br /> 
+Date:   Wed Sep 7 08:08:53 2016 +0800<br /> 
+2.回滚到指定的版本<br /> 
+git reset --hard e377f60e28c8b84158<br /> 
+3.强制提交<br /> 
+git push -f origin master<br /> 
+4.完美
+
